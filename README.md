@@ -22,3 +22,4 @@ This is a starter template for the App.
    ```bash
     npx expo start
    ```
+# HELLO WORLD 
