@@ -5,6 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Colors } from "@/constants/Colors";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Google from '@/assets/images/google-logo.svg';
+import Animated, { FadeIn, FadeInDown } from "react-native-reanimated";
 
 type Props = {}
 
@@ -13,17 +14,16 @@ const WelcomeScreen = (props: Props) => {
       <>
       <Stack.Screen options={ { headerShown: false}} />
       <ImageBackground 
-        source={require("@/assets/images/way-app.jpg")}
-        style={{ flex: 1 }}
+        source={require("@/assets/images/way-apps.jpg")}
+        style={styles.backgroundImage}
         resizeMode="cover"
       >
       <View style={styles.container}>
         <LinearGradient colors={["transparent", "rgba(255, 255, 255, 0.9)", "rgba(255, 255, 255, 1)"]} style={styles.background}>
         <View style={styles.wrapper}>
-        <Text style={styles.title}>WAY</Text>
-        <Text style={styles.description}> Find the Best Place to Go</Text>
 
         <View style={styles.socialLoginWrapper}> 
+        <Animated.View entering={FadeInDown.delay(300).duration(500)}>
         <Link href={"/signup"} asChild>
           <TouchableOpacity style={styles.button}>
             <Ionicons 
@@ -34,9 +34,11 @@ const WelcomeScreen = (props: Props) => {
             <Text style={styles.btnText}>Continue with Email</Text>
           </TouchableOpacity>
         </Link>
+        </Animated.View>
         </View>
 
         <View style={styles.socialLoginWrapper}> 
+        <Animated.View entering={FadeInDown.delay(700).duration(500)}>  
         <Link href={"/signup"} asChild>
           <TouchableOpacity style={styles.button}>
             <Ionicons 
@@ -47,15 +49,18 @@ const WelcomeScreen = (props: Props) => {
             <Text style={styles.btnText}>Continue with Facebook</Text>
           </TouchableOpacity>
         </Link>
+        </Animated.View>
         </View>
 
         <View style={styles.socialLoginWrapper}> 
+        <Animated.View entering={FadeInDown.delay(1100).duration(500)}>  
         <Link href={"/signup"} asChild>
           <TouchableOpacity style={styles.button}>
             <Google width={20} height={20} />
             <Text style={styles.btnText}>Continue with Google</Text>
           </TouchableOpacity>
         </Link>
+        </Animated.View>
         </View>
 
         <Text style={styles.loginText}>
@@ -121,7 +126,8 @@ const WelcomeScreen = (props: Props) => {
       alignItems: 'center',
       justifyContent: 'center',
       gap: 10,
-      marginBottom: 15
+      marginBottom: 10,
+      marginTop: 0
     },
     btnText: {
       fontSize: 14,
@@ -138,5 +144,10 @@ const WelcomeScreen = (props: Props) => {
     loginTextSpan: {
       color: Colors.primary,
       fontWeight: '500'
-    }
+    },
+    backgroundImage: {
+      flex: 1,
+      width: '100%',
+      height: '100%'
+    },
 });

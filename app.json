@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ecommerce-app",
-    "slug": "ecommerce-app",
+    "slug": "way-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.adminExpo.wayApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -27,6 +28,15 @@
     "plugins": [
       "expo-router"
     ],
-    "scheme": "way"
+    "scheme": "way",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "7bf1fee6-bb6c-4820-a3f8-604ad1e22e6a"
+      }
+    },
+    "owner": "way-creator"
   }
 }
