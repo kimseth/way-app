@@ -2,17 +2,12 @@ import { FlatList, StyleSheet, Text, Vibration, View } from 'react-native'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Stack, Tabs } from 'expo-router'
 import ExploreHeader from '@/components/ExploreHeader'
-import listingsData from '@/assets/data/airbnb-listings.json';
 import ListingsMap from '@/components/ListingsMap';
-import listingsDataGeo from '@/assets/data/airbnb-listings.geo.json';
 import ListingsBottomSheet from '@/components/ListingButtomSheet';
 import axios from 'axios';
 import { ProductType } from '@/types/type';
 
 const HomeScreen = () => {
-
-  const items = useMemo(() => listingsData as any, []);
-  const geoItems = useMemo(() => listingsDataGeo, []);
   const [category, setCategory] = useState<string>('Tiny homes');
   const [products, setProducts] = useState<ProductType[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
