@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tabs } from "expo-router";
 import { Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function TabLayout() {
   return (
@@ -12,22 +13,23 @@ export default function TabLayout() {
         )
       }} />
       <Tabs.Screen name='explore' options={{
-        title: 'Explore',
+        title: 'Wishlists',
         tabBarIcon: ({color}) => (
-          <Ionicons name='search-outline' size={22} color={color} />
+          <Ionicons name='heart-outline' size={30} color={color} />
         )
       }} />
-      <Tabs.Screen name='notifications' options={{
+      <Tabs.Screen name='notification' options={{
         title: 'Notification',
+        tabBarBadge: 4,
         tabBarIcon: ({color}) => (
           <Ionicons name='notifications-outline' size={22} color={color} />
         )
       }} />
       <Tabs.Screen name='cart' options={{
-        title: 'Cart',
+        title: 'Inbox',
         tabBarBadge: 3,
-        tabBarIcon: ({color}) => (
-          <Ionicons name='cart-outline' size={22} color={color} />
+        tabBarIcon: ({color, size}) => (
+          <MaterialCommunityIcons name='message-outline' size={size} color={color}/>
         )
       }} />
       <Tabs.Screen name='profile' options={{
