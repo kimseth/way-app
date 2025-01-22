@@ -8,6 +8,10 @@ import axios from 'axios';
 import { ProductType } from '@/types/type';
 
 const HomeScreen = () => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop/new-feature
   const [category, setCategory] = useState<string>('Tiny homes');
   const [products, setProducts] = useState<ProductType[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
