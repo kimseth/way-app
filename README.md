@@ -24,7 +24,7 @@ This is a starter template for the App.
    ```
 3. To build the development server
    
-   # Install expo-dev-client library
+   ### Install expo-dev-client library
      
      To initialize our project for a development build, let's cd inside our project directory and run the following command to install the library:
      
@@ -32,7 +32,7 @@ This is a starter template for the App.
    npx expo install expo-dev-client
    ```
    
-   # Start the development server
+   ### Start the development server
   
      Run the npx expo start to start the development server:
 
@@ -41,7 +41,7 @@ This is a starter template for the App.
      ```
 4. Initialize a development build
 
-   # Install EAS CLI
+   ### Install EAS CLI
    
    We need to install the EAS Command Line Interface (CLI) tool as a global dependency on our local machine. Run the following command:
 
@@ -49,13 +49,13 @@ This is a starter template for the App.
    npm install -g eas-cli
    ```
 
-   # Log in or sign up for an Expo account
+   ### Log in or sign up for an Expo account
 
    ```bash
    eas login
    ```
 
-   # Initialize and link the project to EAS
+   ### Initialize and link the project to EAS
 
    For any new project, the first step is to initialize and link it to the EAS servers. Run the following command:
    
@@ -65,7 +65,7 @@ This is a starter template for the App.
 
    5. Configure project for EAS Build
   
-      # To set up our project for EAS Build, run the following command:
+      ### To set up our project for EAS Build, run the following command:
 
       ```bash
       eas build:configure
