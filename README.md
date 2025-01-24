@@ -67,8 +67,8 @@ This is a starter template for the App.
   
       ### To set up our project for EAS Build, run the following command:
 
-      ```bash
+   ```bash
       eas build:configure
-      ```
+   ```
       
 # HELLO WORLD 
